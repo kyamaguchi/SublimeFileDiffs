@@ -18,12 +18,12 @@ if sublime.platform() == "windows":
 class FileDiffMenuCommand(sublime_plugin.TextCommand):
     def run(self, edit, cmd=None):
         # Individual menu items.
-        CLIPBOARD   = {'text': 'Diff file with Clipboard',          'command' : 'file_diff_clipboard'}
-        SELECTIONS  = {'text': 'Diff Selections',                   'command' : 'file_diff_selections'}
-        SAVED       = {'text': 'Diff file with Saved',              'command' : 'file_diff_saved'}
-        FILE        = {'text': u'Diff file with File in Project…',  'command' : 'file_diff_file'}
-        TAB         = {'text': u'Diff file with Open Tab…',         'command' : 'file_diff_tab'}
-        PREVIOUS    = {'text': 'Diff file with Previous Tab',       'command' : 'file_diff_previous'}
+        CLIPBOARD   = {'text': 'Custom Diff file with Clipboard',          'command' : 'file_diff_clipboard'}
+        SELECTIONS  = {'text': 'Custom Diff Selections',                   'command' : 'file_diff_selections'}
+        SAVED       = {'text': 'Custom Diff file with Saved',              'command' : 'file_diff_saved'}
+        FILE        = {'text': u'Custom Diff file with File in Project…',  'command' : 'file_diff_file'}
+        TAB         = {'text': u'Custom Diff file with Open Tab…',         'command' : 'file_diff_tab'}
+        PREVIOUS    = {'text': 'Custom Diff file with Previous Tab',       'command' : 'file_diff_previous'}
 
         menu_items = [CLIPBOARD, SELECTIONS, SAVED, FILE, TAB, PREVIOUS]
 
