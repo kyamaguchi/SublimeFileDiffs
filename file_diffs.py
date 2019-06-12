@@ -84,6 +84,10 @@ class FileDiffCommand(sublime_plugin.TextCommand):
         if trim_trailing_white_space_before_diff:
             content = [line.rstrip() for line in content]
 
+        trim_indent_before_diff = self.get_setting('trim_indent_before_diff', False)
+        if trim_indent_before_diff:
+            content = [line.lstrip() for line in content]
+
         return (content, file_name)
 
     def run_diff(self, a, b, from_file, to_file, **options):
